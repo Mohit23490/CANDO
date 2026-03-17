@@ -51,7 +51,7 @@ function Createlement(title , desc , column ,id){
 
 // to delete button in data base
       async function deleteTask(id) {
-        const response = await fetch(`http://localhost:3000/api/data/${id}`, {
+        const response = await fetch(`https://cando-backend.onrender.com/api/data/${id}`, {
         method: "DELETE"
         })
         const data = await response.json()
@@ -121,7 +121,7 @@ async function countasks(){
         }
     })
 }
-const response = await fetch("http://localhost:3000/api/data/", {
+const response = await fetch("https://cando-backend.onrender.com/api/data/", {
 method: "POST",                        
 headers: {
   "Content-Type": "application/json"   
@@ -133,7 +133,7 @@ console.log(data);
 }
 
 async function getData() {
-    const response = await fetch("http://localhost:3000/api/data/get")
+    const response = await fetch("https://cando-backend.onrender.com/api/data/get")
     const task = await response.json()
     for (const key in task) {
          const column = document.querySelector(`#${key}`)
