@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div class="left">
+          <h2>Cando</h2>
+        </div>
+        <div class="right">
+          <button>Add new</button>
+        </div>
+      </nav>
+      <div class="header">
+        <h2 class=" todo active">todo</h2>
+        <h2 class="recent">recent</h2>
+        <h2 class="done">done</h2>
+      </div>
+      <content>
+        <div id="todo" class="colums">
+          <div class="column-top">
+            <div class="left">todo</div>
+            <div class="right">count</div>
+          </div>
+        </div>  
+      <div  id="recent" class="colums" >
+          <div class="column-top">
+            <div class="left">recent</div>
+            <div class="right">count</div>
+          </div>
+        </div>
+        <div
+          id="done"
+          class="colums"
+        >
+          <div class="column-top">
+            <div class="left">done</div>
+            <div class="right">count</div>
+          </div>
+        </div>
+      </content>
+    </main>
+
+    <div class="addnew">
+       <div class="center"></div>
+        <div class="internal">
+          <h1>create new task's</h1>
+        <input id = "title" type="text" class="Tittle"  placeholder="enter tiltle">
+        <textarea  id="desc" placeholder="description"></textarea>
+        <button>
+          Add 
+        </button>
+        </div>
+    </div>
+  </body>
+  <script src="script2.js"></script>
+</html>
