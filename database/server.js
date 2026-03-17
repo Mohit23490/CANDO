@@ -1,9 +1,18 @@
 const app = require('./app.js')
 const database = require('./db/db.js')
 const dotenv = require('dotenv')
+
 dotenv.config();
-const Port = process.env.PORT
-app.listen(Port,()=>{
-    console.log(`app is listning on port http://localhost:${Port}`)
-})
-database();
+
+const Port = process.env.PORT;
+
+database()
+  .then(() => {
+    app.listen(Port, () => {
+      console.log(`App is listening on http://localhost:${Port}`);
+    });
+  })
+  .catch((err) => {
+    console.log("Database connection failed:", err);
+  });
+  
